@@ -45,7 +45,12 @@ namespace Blacklight.Controls.Wpf
         /// <summary>
         /// Docks the panels down the rights side,
         /// </summary>
-        Right
+        Right,
+
+        /// <summary>
+        /// Docks no panels
+        /// </summary>
+        None
     }
 
     /// <summary>
@@ -704,6 +709,11 @@ namespace Blacklight.Controls.Wpf
                             newWidth = (this.ActualWidth / (double)(this.panels.Count - 1)) - orderedPanels[i].Margin.Left - orderedPanels[i].Margin.Right;
                             newHeight = this.minimizedRowHeight - orderedPanels[i].Margin.Top - orderedPanels[i].Margin.Bottom;
                         }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newWidth = 0;
+                            newHeight = 0;
+                        }
                         #endregion
 
                         if (newHeight < 0)
@@ -743,6 +753,11 @@ namespace Blacklight.Controls.Wpf
                             newX = currentOffset;
                             newY = 0;
                         }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newX = this.ActualWidth / 2;
+                            newY = this.ActualHeight / 2;
+                        }
                         #endregion
 
                         // Set the position of the panel
@@ -769,6 +784,11 @@ namespace Blacklight.Controls.Wpf
                         {
                             newWidth = this.ActualWidth - orderedPanels[i].Margin.Left - orderedPanels[i].Margin.Right;
                             newHeight = this.ActualHeight - this.minimizedRowHeight - orderedPanels[i].Margin.Top - orderedPanels[i].Margin.Bottom;
+                        }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newWidth = this.ActualWidth - orderedPanels[i].Margin.Right - orderedPanels[i].Margin.Left;
+                            newHeight = this.ActualHeight - orderedPanels[i].Margin.Bottom - orderedPanels[i].Margin.Top;
                         }
                         #endregion
 
@@ -808,6 +828,11 @@ namespace Blacklight.Controls.Wpf
                         {
                             newX = 0;
                             newY = this.minimizedRowHeight;
+                        }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newX = 0;
+                            newY = 0;
                         }
                         #endregion
 
@@ -875,6 +900,10 @@ namespace Blacklight.Controls.Wpf
                             newWidth = (this.ActualWidth / (double)(this.panels.Count - 1)) - panel.Margin.Left - panel.Margin.Right;
                             newHeight = this.minimizedRowHeight - panel.Margin.Top - panel.Margin.Bottom;
                         }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newWidth = newHeight = 0;
+                        }
                         #endregion
 
                         if (newHeight < 0)
@@ -900,6 +929,11 @@ namespace Blacklight.Controls.Wpf
                         {
                             newWidth = this.ActualWidth - panel.Margin.Left - panel.Margin.Right;
                             newHeight = this.ActualHeight - this.minimizedRowHeight - panel.Margin.Top - panel.Margin.Bottom;
+                        }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newWidth = this.ActualWidth - panel.Margin.Right - panel.Margin.Left;
+                            newHeight = this.ActualHeight - panel.Margin.Bottom - panel.Margin.Top;
                         }
                         #endregion
 
@@ -994,6 +1028,11 @@ namespace Blacklight.Controls.Wpf
                             newX = currentOffset;
                             newY = 0;
                         }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newX = this.ActualWidth / 2;
+                            newY = this.ActualHeight / 2;
+                        }
                         #endregion
 
                         // Animate the position
@@ -1036,6 +1075,11 @@ namespace Blacklight.Controls.Wpf
                         {
                             newX = 0;
                             newY = this.minimizedRowHeight;
+                        }
+                        else if (this.minimizedPosition.Equals(MinimizedPositions.None))
+                        {
+                            newX = 0;
+                            newY = 0;
                         }
                         #endregion
                         // Animate maximized panel                        

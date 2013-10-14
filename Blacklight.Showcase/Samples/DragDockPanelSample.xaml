@@ -48,6 +48,7 @@
             <ComboBoxItem Content="Bottom" />
             <ComboBoxItem Content="Left" />
             <ComboBoxItem Content="Top" />
+            <ComboBoxItem Content="None" />
         </ComboBox>
         <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap"
                    Text="(The position where the panels minimize to. Either Right, Bottom, Left or Top)" VerticalAlignment="Center" />

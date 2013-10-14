@@ -149,6 +149,9 @@ namespace Blacklight.Showcase.Wpf.Samples
                 case 3:
                     this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Top;
                     break;
+                case 4:
+                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.None;
+                    break;
             }
         }
     }
