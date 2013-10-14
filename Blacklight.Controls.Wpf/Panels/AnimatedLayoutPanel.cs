@@ -971,13 +971,21 @@ namespace Blacklight.Controls.Wpf
                 // Add animation for X axis
                 DoubleAnimation leftAnim = new DoubleAnimation();
                 leftAnim.Duration = new Duration(this.TransitionDuration);
+#if SILVERLIGHT
                 Storyboard.SetTargetName(leftAnim, child.Name);
+#else
+                Storyboard.SetTarget(leftAnim, child);
+#endif
                 Storyboard.SetTargetProperty(leftAnim, new PropertyPath("(UIElement.RenderTransform).(TransformGroup.Children)[" + targetTransformIndex.ToString() + "].(TranslateTransform.X)"));
 
                 // Add animation for Y axis
                 DoubleAnimation topAnim = new DoubleAnimation();
                 topAnim.Duration = new Duration(this.TransitionDuration);
+#if SILVERLIGHT
                 Storyboard.SetTargetName(topAnim, child.Name);
+#else
+                Storyboard.SetTarget(topAnim, child);
+#endif
                 Storyboard.SetTargetProperty(topAnim, new PropertyPath("(UIElement.RenderTransform).(TransformGroup.Children)[" + targetTransformIndex.ToString() + "].(TranslateTransform.Y)"));
 
                 storyboard.Children.Add(leftAnim);

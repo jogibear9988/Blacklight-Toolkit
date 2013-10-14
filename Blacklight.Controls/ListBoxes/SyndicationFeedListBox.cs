@@ -8,6 +8,9 @@
 // <author>Martin Grayson</author>
 // <summary>A list box for displaying feeds.</summary>
 //-----------------------------------------------------------------------
+
+using System.ServiceModel.Syndication;
+
 namespace Blacklight.Controls
 {
     using System;
@@ -20,7 +23,7 @@ namespace Blacklight.Controls
     using System.Windows.Media;
     using System.Windows.Media.Animation;
     using System.Windows.Shapes;
-    using System.ServiceModel.Syndication;
+    //using System.ServiceModel.Syndication;
     using System.Xml;
     using System.Collections.Generic;
     using System.IO;

@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="SearchResponse1" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Blacklight.Controls.LiveSearchService.SearchResponse1, Service References.LiveSearchService.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>Blacklight.Controls.LiveSearchService.SearchResponse1</TypeInfo>
 </GenericObjectDataSource>

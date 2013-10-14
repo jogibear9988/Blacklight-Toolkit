@@ -1166,7 +1166,7 @@
                 <ControlTemplate TargetType="local:LoadingAnimation">
                     <Grid>
                         <Grid.Resources>
-                            <Storyboard x:Name="PART_LoadingAnimation" RepeatBehavior="Forever">
+                            <Storyboard x:Key="sb" x:Name="PART_LoadingAnimation" RepeatBehavior="Forever">
                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(UIElement.Opacity)">
                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                     <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.66"/>

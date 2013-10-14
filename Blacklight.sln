@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Controls", "Blacklight.Controls\Blacklight.Controls.csproj", "{49349229-35C7-4589-8622-8165757AEF4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase", "Blacklight.Showcase\Blacklight.Showcase.csproj", "{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}"
@@ -12,27 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase.Wpf", "Blacklight.Showcase.Wpf\Blacklight.Showcase.Wpf.csproj", "{EF61BC48-53B7-4CD1-887C-1866A4582101}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs32
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Blacklight.Controls\\Blacklight.Controls.csproj
-		SccProjectName1 = Blacklight.Controls
-		SccLocalPath1 = Blacklight.Controls
-		SccProjectUniqueName2 = Blacklight.Showcase.Web\\Blacklight.Showcase.Web.csproj
-		SccProjectName2 = Blacklight.Showcase.Web
-		SccLocalPath2 = Blacklight.Showcase.Web
-		SccProjectUniqueName3 = Blacklight.Showcase\\Blacklight.Showcase.csproj
-		SccProjectName3 = Blacklight.Showcase
-		SccLocalPath3 = Blacklight.Showcase
-		SccProjectUniqueName4 = Blacklight.Controls.Wpf\\Blacklight.Controls.Wpf.csproj
-		SccProjectName4 = Blacklight.Controls.Wpf
-		SccLocalPath4 = Blacklight.Controls.Wpf
-		SccProjectUniqueName5 = Blacklight.Showcase.Wpf\\Blacklight.Showcase.Wpf.csproj
-		SccProjectName5 = Blacklight.Showcase.Wpf
-		SccLocalPath5 = Blacklight.Showcase.Wpf
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
