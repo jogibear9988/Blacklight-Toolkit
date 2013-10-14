@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.ReleaseNotes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <UserControl.Resources>
+        <Style TargetType="ContentControl" x:Key="ReleaseHeader">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="0,0,0,10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Border Background="White" CornerRadius="8" Padding="8,3,3,3">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="ContentControl" x:Key="ReleaseItem">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Margin" Value="10,0,0,3" />
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding}" LineHeight="20" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Ellipse Width="4" Height="4" Fill="White" HorizontalAlignment="Center"
+                                     VerticalAlignment="Top" Margin="8"/>
+                            
+                            <ContentPresenter Grid.Column="1" VerticalAlignment="Top" Margin="5,3,5,5" />
+                            
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <ContentControl Style="{StaticResource ReleaseHeader}"
+                            Content="Release v4.0 (Jul09)"
+                       />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Blacklight source projects and binaries migrated to Silverlight 3."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Moved DragDockPanelHost to be an ItemsControl - allowing databinding."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Fixed a number of animation and layout issues with DragDockHost for both Silverlight and WPF."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Added 2 new controls - RangeSlider and WatermarkedTextBox."
+                            />
+            <ContentControl Style="{StaticResource ReleaseHeader}"
+                            Content="Release v4.1 (Jul09)"
+                       />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Between v3.0 and v4.0, the PanelState property on the DragDockPanel became read-only, due to some toggling issues. This has caused issues with setting the default panel state in XAML. This property has been made writable again."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Now that DragDockPanel host is an ItemsControl, users could load any object type as an item. However, in v4.0, it was not possible to define a default panel style. A property called DefaultPanelStyle has been added to DragDockPanel host."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Since becoming an ItemsControl, the DragDockPanelHost had a number of bugs introduced with adding and removing panels, after they had been moved around. These bugs have now been fixed."
+                            />
+            <ContentControl Style="{StaticResource ReleaseHeader}"
+                            Content="Release v4.2 (Nov09)"
+                       />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Fixes to the AnimatedLayoutPanel and WatermarkedTextBox controls."
+                            />
+            <ContentControl Style="{StaticResource ReleaseHeader}"
+                            Content="Release v4.3 (Dec09)"
+                       />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Removal of the WPF controls project. (Support suspended in favour of developing new Silverlight functionality - Sorry.)"
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Fixed minimising, maximising drag dock panel issues present since 4.1."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Removed mouse wheel eventing model, as mouse wheel support now available in Silverlight 3."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Fixed media player issues that were preventing the player bar appearing and the buffering progress appearing."
+                            />
+            <ContentControl Style="{StaticResource ReleaseItem}"
+                            Content="Added Bing logo to Live Search List Box."
+                            />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

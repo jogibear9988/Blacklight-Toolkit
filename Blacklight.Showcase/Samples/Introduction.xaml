@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.Introduction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls"
+    >
+
+
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Margin="20">
+            <TextBlock FontSize="16" Foreground="#4cFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,30"
+                       Text="W E L C O M E" />
+            <TextBlock FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,20" LineHeight="20"
+                       Text="Welcome to Blacklight Silverlight Showcase. Blacklight is a set of designer-focused controls for Silverlight and WPF. This is the demo application for the various controls and samples created for the codeplex project. You can see the controls running live here, and read about how to use the controls." />
+            <TextBlock FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,20" LineHeight="20"
+                       Text="You are free to download the code, have a play, and use it in your own projects. Everything is subject to the Microsoft Public License, which you can read about by selecting the link below." />
+            <TextBlock FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,20" LineHeight="20"
+                       Text="Use the menu on the left hand side to look through the various samples. This showcase application will be updated with every release (around once a month), however, feel free to get the latest source code from the 'Source Code' tab on the codeplex site. Please pass on any feedback or found bugs too, so we can continually improve the control set and samples." />
+            <TextBlock FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,20" LineHeight="20"
+                       Text="If you have found any bugs or have any ideas for effects or controls, simply add it to the 'Issue Tracker' section on the codeplex site, and we will hopefully get around to it!" />
+            <TextBlock FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,50"
+                       Text="I hope you enjoy using the blacklight controls!" />
+            
+            <TextBlock FontSize="16" Foreground="#4cFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,30"
+                       Text="U S E F U L  L I N K S" />
+            
+            <controls:WebLink FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" Margin="0,0,0,20"
+                              Text="Blacklight on CodePlex" Uri="http://www.codeplex.com/blacklight" />
+            
+            <controls:WebLink FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" Margin="0,0,0,20"
+                              Text="Get the latest Blacklight release here" Uri="http://www.codeplex.com/blacklight/Release/ProjectReleases.aspx" />
+            
+            <controls:WebLink FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" Margin="0,0,0,20"
+                              Text="Microsoft Public License information" Uri="http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx" />
+            
+            <TextBlock FontSize="16" Foreground="#4cFFFFFF" FontFamily="Verdana" TextWrapping="Wrap" Margin="0,0,0,30"
+                       Text="B L O G S" />
+            
+            <controls:WebLink FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" Margin="0,0,0,20"
+                              Text="Martin Grayson's Blog - Adventures of a 'Devigner'" Uri="http://blogs.msdn.com/mgrayson/" />
+
+            <controls:WebLink FontSize="14" Foreground="#FFFFFFFF" FontFamily="Verdana" Margin="0,0,0,20"
+                              Text="Dave's Blog - Dave's Design Blog" Uri="http://blogs.msdn.com/dave/" />
+
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

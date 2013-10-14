@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF61BC48-53B7-4CD1-887C-1866A4582101}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blacklight.Showcase.Wpf</RootNamespace>
+    <AssemblyName>Blacklight.Showcase.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Navigation\NavigationItem.cs" />
+    <Compile Include="Navigation\NavigationMenu.cs" />
+    <Compile Include="Navigation\Sample.cs" />
+    <Compile Include="Samples\AnimatedExpanderSample.xaml.cs">
+      <DependentUpon>AnimatedExpanderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AnimatedLayoutPanelSample.xaml.cs">
+      <DependentUpon>AnimatedLayoutPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ClippingBorderSample.xaml.cs">
+      <DependentUpon>ClippingBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Contributor.cs" />
+    <Compile Include="Samples\DavesGlossyControlsSample.xaml.cs">
+      <DependentUpon>DavesGlossyControlsSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DragDockPanelSample.xaml.cs">
+      <DependentUpon>DragDockPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DragDockPanelWithViewModelSample.xaml.cs">
+      <DependentUpon>DragDockPanelWithViewModelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DropShadowBorderSample.xaml.cs">
+      <DependentUpon>DropShadowBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DropShadowTextBlockSample.xaml.cs">
+      <DependentUpon>DropShadowTextBlockSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GlassBorderSample.xaml.cs">
+      <DependentUpon>GlassBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\InnerGlowBorderSample.xaml.cs">
+      <DependentUpon>InnerGlowBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\LoadingAnimationSample.xaml.cs">
+      <DependentUpon>LoadingAnimationSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\OuterGlowBorderSample.xaml.cs">
+      <DependentUpon>OuterGlowBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\PerspectiveShadowBorderSample.xaml.cs">
+      <DependentUpon>PerspectiveShadowBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\RadialShadowBorderSample.xaml.cs">
+      <DependentUpon>RadialShadowBorderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\RangeSliderSample.xaml.cs">
+      <DependentUpon>RangeSliderSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ReleaseNotes.xaml.cs">
+      <DependentUpon>ReleaseNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SampleImageViewer.xaml.cs">
+      <DependentUpon>SampleImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\StrokeTextBlockSample.xaml.cs">
+      <DependentUpon>StrokeTextBlockSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\WatermarkedTextBoxSample.xaml.cs">
+      <DependentUpon>WatermarkedTextBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\WhoIsInvolved.xaml.cs">
+      <DependentUpon>WhoIsInvolved.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ResourceDictionaries\DavesGlossyControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\AnimatedExpanderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\AnimatedLayoutPanelSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ClippingBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DavesGlossyControlsSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DragDockPanelSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DragDockPanelWithViewModelSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DropShadowBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DropShadowTextBlockSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\GlassBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\InnerGlowBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Introduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\LoadingAnimationSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\OuterGlowBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\PerspectiveShadowBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RadialShadowBorderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RangeSliderSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ReleaseNotes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SampleImageViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\StrokeTextBlockSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\WatermarkedTextBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\WhoIsInvolved.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blacklight.Controls.Wpf\Blacklight.Controls.Wpf.csproj">
+      <Project>{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}</Project>
+      <Name>Blacklight.Controls.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\placeholder.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

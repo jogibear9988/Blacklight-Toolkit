@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.StrokeTextBlockSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    <UserControl.Resources>
+
+        <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+            <controls:ResourceDictionaryManager.ResourceDictionaries>
+                <controls:ResourceDictionaryCollection>
+
+                    <controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                        <controls:ResourceDictionary.ResourceKeys>
+                            <controls:ResourceKeyCollection>
+                                <controls:ResourceKey ResourceName="GlossyBlackSlider" />
+                            </controls:ResourceKeyCollection>
+                        </controls:ResourceDictionary.ResourceKeys>
+                    </controls:ResourceDictionary>
+
+                </controls:ResourceDictionaryCollection>
+            </controls:ResourceDictionaryManager.ResourceDictionaries>
+        </controls:ResourceDictionaryManager>
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5"
+                   Text="Stroke Opacity" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="0" Maximum="1" Value="1"
+                x:Name="opacitySlider" Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(Value between 0 and 1)" VerticalAlignment="Center" />
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="1"
+                   Text="Stroke Thickness" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="0" Maximum="10" Value="1" Grid.Row="1"
+                x:Name="thicknessSlider"  Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="1"
+                   Text="(Any double, here between 0 and 10)" VerticalAlignment="Center" />
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="2"
+                   Text="Stroke Color" VerticalAlignment="Center" />
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="5" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="255" x:Name="colorATextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="255" x:Name="colorRTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="255" x:Name="colorGTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="255" x:Name="colorBTextBox" />
+        </StackPanel>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(Normally a Brush, but here, an ARGB value, each from 0-255)" VerticalAlignment="Center" />
+        
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="3"
+                   Text="Font Size" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="1" Maximum="100" Value="36" Grid.Row="3"
+                x:Name="fontSizeSlider"  Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="3"
+                   Text="(Any double, here between 1 and 100)" VerticalAlignment="Center" />
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="4"
+                   Text="Text" VerticalAlignment="Center" />
+        <TextBox Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Text="Stroke Text Block (Alpha)" Grid.Row="4"
+                x:Name="text" FontFamily="Verdana" FontSize="14"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="4"
+                   Text="(Any string value)" VerticalAlignment="Center" />
+
+        <controls:ClippingBorder CornerRadius="10" Background="#ff000000" Grid.Row="5" Grid.ColumnSpan="3" Margin="0,15,0,0" Padding="10">
+
+            <controls:StrokeTextBlock x:Name="strokeTextBlock"
+                                          Text="Stroke Text Block (Alpha)"
+                                          Stroke="#ffffffff" 
+                                        StrokeThickness="1"
+                                      StrokeOpacity="1"
+                                          TextWrapping="Wrap"
+                                          FontFamily="Verdana"
+                                          FontSize="36"
+
+                                          >
+            </controls:StrokeTextBlock>
+
+        </controls:ClippingBorder>
+
+    </Grid>
+</UserControl>
+

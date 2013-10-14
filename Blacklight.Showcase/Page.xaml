@@ -1,0 +1,376 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" 
+    xmlns:samples="clr-namespace:Blacklight.Showcase.Samples"
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+ 
+    <UserControl.Resources>        
+            <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+        <controls:ResourceDictionaryManager.ResourceDictionaries>
+            <controls:ResourceDictionaryCollection>
+
+                <controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                    <controls:ResourceDictionary.ResourceKeys>
+                        <controls:ResourceKeyCollection>
+                            <controls:ResourceKey ResourceName="GlossyBlackScrollViewer" />
+                        </controls:ResourceKeyCollection>
+                    </controls:ResourceDictionary.ResourceKeys>
+                </controls:ResourceDictionary>
+
+            </controls:ResourceDictionaryCollection>
+        </controls:ResourceDictionaryManager.ResourceDictionaries>
+        </controls:ResourceDictionaryManager>
+
+        <ControlTemplate x:Key="SampleTabRadioButton" TargetType="RadioButton">
+            <controls:ClippingBorder Margin="0,0,0,-5" Background="#FF000000" BorderBrush="#FF333333" BorderThickness="2,2,2,2" CornerRadius="5,5,0,0" x:Name="clippingBorder" ClipContent="True">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="clippingBorder" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF333333"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="flash" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.5"/>
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.2"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="flash" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Grid Height="Auto" Width="Auto" Margin="0,0,0,5">
+                    <ContentPresenter Margin="3,3,3,3" d:LayoutOverrides="Width, Height"/>
+                    <Rectangle Fill="#FFFFFFFF" Stroke="#FFFFFFFF" Margin="0,0,0,-5" x:Name="flash" Opacity="0"/>
+                </Grid>
+            </controls:ClippingBorder>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="NavigationRadioButtonTemplate" TargetType="RadioButton">
+            <Border Padding="15,8,15,8" x:Name="rootBorder" Background="#00FFFFFF">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Disabled"/>
+                        <VisualState x:Name="Normal">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#00FFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#99FFFFFF"/>
+                                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#4CFFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#33FFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="ContentFocused"/>
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="checkedRectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#ff333333"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Grid>
+                    <Rectangle Margin="-14,-7,-14,-7" Fill="#00333333" x:Name="checkedRectangle"/>
+                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="NavigationItemRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="Template" Value="{StaticResource NavigationRadioButtonTemplate}"/>
+            <Setter Property="GroupName" Value="MenuItem"/>
+        </Style>
+
+        <ControlTemplate x:Key="MenuRadioButtonTemplate" TargetType="RadioButton">
+            <Border Padding="5,5,5,5" x:Name="rootBorder" Background="#00FFFFFF" CornerRadius="3,3,3,3">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Disabled"/>
+                        <VisualState x:Name="Normal">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#00FFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#99FFFFFF"/>
+                                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#4CFFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                        	<Storyboard>
+                        		<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                        			<SplineColorKeyFrame KeyTime="00:00:00" Value="#33FFFFFF"/>
+                        		</ColorAnimationUsingKeyFrames>
+                        	</Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="ContentFocused"/>
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="checkedRectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#664792DE"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Grid>
+                    <Rectangle Margin="-4,-4,-4,-4" Fill="#004792DE" RadiusX="3" RadiusY="3" x:Name="checkedRectangle"/>
+                    <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="MenuItemRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+            <Setter Property="Template" Value="{StaticResource MenuRadioButtonTemplate}"/>
+            <Setter Property="GroupName" Value="MenuItem"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" MinHeight="600" MinWidth="910" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF000000" Offset="1"/>
+                <GradientStop Color="#FF202020" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Border Margin="0,0,0,0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF242424"/>
+                    <GradientStop Color="#FF000000" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+
+                <Path Fill="Black" Stretch="Fill" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Center" Width="300" Height="62" Data="M21.71875,34.061668 C20.010416,34.061668 18.28125,34.431458 16.53125,35.171043 C14.78125,35.910629 13.15625,36.863754 11.65625,38.030418 L11.65625,58.030418 C13.322917,58.780418 14.755208,59.30125 15.953125,59.592918 C17.151041,59.884586 18.510416,60.030418 20.03125,60.030418 C23.28125,60.030418 25.828125,58.962711 27.671875,56.827293 C29.515625,54.691875 30.4375,51.342918 30.4375,46.780418 C30.4375,42.613754 29.75,39.452293 28.375,37.296043 C27,35.139793 24.78125,34.061668 21.71875,34.061668 z M5.78125,15.717918 L11.65625,15.717918 L11.65625,33.092918 C13.302083,31.73875 15.052083,30.629375 16.90625,29.764793 C18.760416,28.900211 20.84375,28.467918 23.15625,28.467918 C27.28125,28.467918 30.536459,30.05125 32.921875,33.217918 C35.307293,36.384583 36.5,40.853333 36.5,46.624168 C36.5,49.540836 36.088543,52.165836 35.265625,54.499168 C34.442707,56.8325 33.333332,58.790836 31.9375,60.374168 C30.458334,62.02 28.833334,63.254375 27.0625,64.077293 C25.291666,64.900208 23.34375,65.311668 21.21875,65.311668 C19.239584,65.311668 17.510416,65.077293 16.03125,64.608543 C14.552083,64.139793 13.09375,63.509586 11.65625,62.717918 L11.28125,64.342918 L5.78125,64.342918 z M45.717083,15.717918 L51.592083,15.717918 L51.592083,64.342918 L45.717083,64.342918 z M84.499168,46.030418 C82.707504,46.134583 80.598129,46.290833 78.171043,46.499168 C75.743958,46.707504 73.822083,47.009583 72.405418,47.405418 C70.717918,47.884583 69.353333,48.629375 68.311668,49.639793 C67.270004,50.650211 66.749168,52.040836 66.749168,53.811668 C66.749168,55.811668 67.353333,57.316875 68.561668,58.327293 C69.770004,59.337711 71.613754,59.842918 74.092918,59.842918 C76.155418,59.842918 78.040833,59.441875 79.749168,58.639793 C81.457504,57.837711 83.040833,56.874168 84.499168,55.749168 z M75.155418,28.592918 C77.613754,28.592918 79.754379,28.796043 81.577293,29.202293 C83.400208,29.608543 84.978333,30.30125 86.311668,31.280418 C87.624168,32.23875 88.624168,33.478333 89.311668,34.999168 C89.999168,36.520004 90.342918,38.405418 90.342918,40.655418 L90.342918,64.342918 L84.499168,64.342918 L84.499168,60.624168 C83.978333,60.978336 83.275208,61.473125 82.389793,62.108543 C81.504379,62.743961 80.645004,63.249168 79.811668,63.624168 C78.832504,64.103333 77.707504,64.504379 76.436668,64.827293 C75.165833,65.150208 73.676254,65.311668 71.967918,65.311668 C68.822083,65.311668 66.155418,64.270004 63.967918,62.186668 C61.780418,60.103336 60.686668,57.447086 60.686668,54.217918 C60.686668,51.572086 61.254375,49.431461 62.389793,47.796043 C63.525211,46.160629 65.145004,44.874168 67.249168,43.936668 C69.374168,42.999168 71.926254,42.363754 74.905418,42.030418 C77.884583,41.697083 81.082504,41.447083 84.499168,41.280418 L84.499168,40.374168 C84.499168,39.040833 84.264793,37.936668 83.796043,37.061668 C83.327293,36.186668 82.655418,35.499168 81.780418,34.999168 C80.947083,34.520004 79.947083,34.197083 78.780418,34.030418 C77.613754,33.863754 76.395004,33.780418 75.124168,33.780418 C73.582504,33.780418 71.863754,33.983543 69.967918,34.389793 C68.072083,34.796043 66.113754,35.384583 64.092918,36.155418 L63.780418,36.155418 L63.780418,30.186668 C64.926254,29.874168 66.582504,29.530418 68.749168,29.155418 C70.915833,28.780418 73.051254,28.592918 75.155418,28.592918 z M116.27959,28.624168 C118.27959,28.624168 120.24313,28.905418 122.17021,29.467918 C124.0973,30.030418 125.86292,30.717918 127.46709,31.530418 L127.46709,38.061668 L127.15459,38.061668 C125.36292,36.665833 123.51396,35.592918 121.60771,34.842918 C119.70146,34.092918 117.84209,33.717918 116.02959,33.717918 C112.69625,33.717918 110.06605,34.837708 108.13896,37.077293 C106.21188,39.316879 105.24834,42.603333 105.24834,46.936668 C105.24834,51.145 106.19105,54.379375 108.07646,56.639793 C109.96188,58.900211 112.61292,60.030418 116.02959,60.030418 C117.21709,60.030418 118.42542,59.874168 119.65459,59.561668 C120.88375,59.249168 121.98792,58.842918 122.96709,58.342918 C123.82125,57.905418 124.62334,57.441875 125.37334,56.952293 C126.12334,56.462711 126.71709,56.040836 127.15459,55.686668 L127.46709,55.686668 L127.46709,62.155418 C125.50875,63.092918 123.64938,63.822086 121.88896,64.342918 C120.12855,64.863754 118.25875,65.124168 116.27959,65.124168 C113.75875,65.124168 111.44625,64.754379 109.34209,64.014793 C107.23792,63.275211 105.43584,62.155418 103.93584,60.655418 C102.415,59.155418 101.23792,57.259586 100.40459,54.967918 C99.571251,52.67625 99.154587,49.999168 99.154587,46.936668 C99.154587,41.228333 100.7223,36.749168 103.85771,33.499168 C106.99313,30.249168 111.13375,28.624168 116.27959,28.624168 z M135.24791,15.717918 L141.12291,15.717918 L141.12291,46.905418 L158.09166,29.436668 L165.49791,29.436668 L149.27916,45.561668 L166.68541,64.342918 L158.93541,64.342918 L144.93541,49.061668 L141.12291,52.686668 L141.12291,64.342918 L135.24791,64.342918 z M172.93375,15.717918 L178.80875,15.717918 L178.80875,64.342918 L172.93375,64.342918 z M190.49709,29.436668 L196.37209,29.436668 L196.37209,64.342918 L190.49709,64.342918 z M190.12209,17.499168 L196.74709,17.499168 L196.74709,23.592918 L190.12209,23.592918 z M222.06041,33.749168 C218.83124,33.749168 216.28958,34.832504 214.43541,36.999168 C212.58124,39.165833 211.65416,42.311668 211.65416,46.436668 C211.65416,50.353336 212.34166,53.322086 213.71666,55.342918 C215.09166,57.36375 217.37291,58.374168 220.56041,58.374168 C222.26874,58.374168 223.98228,58.046043 225.70103,57.389793 C227.41978,56.733543 228.99791,55.853336 230.43541,54.749168 L230.43541,35.717918 C228.87291,35.009583 227.41978,34.504379 226.07603,34.202293 C224.73228,33.900208 223.39374,33.749168 222.06041,33.749168 z M221.02916,28.467918 C223.04999,28.467918 224.74271,28.671043 226.10728,29.077293 C227.47186,29.483543 228.91458,30.103336 230.43541,30.936668 L230.81041,29.436668 L236.31041,29.436668 L236.31041,60.374168 C236.31041,66.290833 234.96666,70.634583 232.27916,73.405418 C229.59166,76.176254 225.45624,77.561668 219.87291,77.561668 C218.01874,77.561668 216.21146,77.431458 214.45103,77.171043 C212.69061,76.910629 210.95624,76.540833 209.24791,76.061668 L209.24791,70.061668 L209.56041,70.061668 C210.51874,70.436668 212.03958,70.900208 214.12291,71.452293 C216.20624,72.004379 218.28958,72.280418 220.37291,72.280418 C222.37291,72.280418 224.02916,72.040833 225.34166,71.561668 C226.65416,71.082504 227.67499,70.415833 228.40416,69.561668 C229.13333,68.749168 229.65416,67.770004 229.96666,66.624168 C230.27916,65.478333 230.43541,64.197083 230.43541,62.780418 L230.43541,59.592918 C228.66458,61.009586 226.97186,62.066875 225.35728,62.764793 C223.74271,63.462711 221.68541,63.811668 219.18541,63.811668 C215.01874,63.811668 211.71146,62.306461 209.26353,59.296043 C206.81561,56.285625 205.59166,52.040836 205.59166,46.561668 C205.59166,43.561668 206.01353,40.973129 206.85728,38.796043 C207.70103,36.618958 208.85208,34.738754 210.31041,33.155418 C211.66458,31.67625 213.31041,30.525211 215.24791,29.702293 C217.18541,28.879375 219.11249,28.467918 221.02916,28.467918 z M247.87125,15.717918 L253.74625,15.717918 L253.74625,33.311668 C255.57957,31.790836 257.4754,30.603336 259.43375,29.749168 C261.39209,28.895 263.4025,28.467918 265.465,28.467918 C269.23584,28.467918 272.11084,29.603336 274.09,31.874168 C276.06915,34.145004 277.05875,37.415833 277.05875,41.686668 L277.05875,64.342918 L271.18375,64.342918 L271.18375,44.467918 C271.18375,42.863754 271.09,41.358543 270.9025,39.952293 C270.715,38.546043 270.37125,37.447083 269.87125,36.655418 C269.3504,35.780418 268.6004,35.129379 267.62125,34.702293 C266.64209,34.275208 265.37125,34.061668 263.80875,34.061668 C262.20459,34.061668 260.5275,34.457504 258.7775,35.249168 C257.0275,36.040833 255.35042,37.051254 253.74625,38.280418 L253.74625,64.342918 L247.87125,64.342918 z M288.49625,19.405418 L294.37125,19.405418 L294.37125,29.436668 L306.49625,29.436668 L306.49625,34.374168 L294.37125,34.374168 L294.37125,50.280418 C294.37125,52.11375 294.4129,53.546043 294.49625,54.577293 C294.57959,55.608543 294.87125,56.572086 295.37125,57.467918 C295.82959,58.30125 296.45978,58.910625 297.26187,59.296043 C298.06396,59.681461 299.2879,59.874168 300.93375,59.874168 C301.89209,59.874168 302.89209,59.733543 303.93375,59.452293 C304.9754,59.171043 305.7254,58.936668 306.18375,58.749168 L306.49625,58.749168 L306.49625,64.030418 C305.39209,64.322083 304.18896,64.561668 302.88687,64.749168 C301.58478,64.936668 300.42334,65.030418 299.4025,65.030418 C295.84,65.030418 293.13165,64.072083 291.2775,62.155418 C289.42334,60.23875 288.49625,57.165836 288.49625,52.936668 L288.49625,34.374168 L284.5275,34.374168 L284.5275,29.436668 L288.49625,29.436668 z" Stroke="#7FFFFFFF" />
+
+                <TextBlock HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Center" Width="Auto" FontFamily="Verdana" FontSize="48" Foreground="#7fFFFFFF" Text="showcase " FontWeight="Normal"/>
+                <StackPanel HorizontalAlignment="Right" Width="Auto" VerticalAlignment="Bottom" Margin="0,0,10,10">
+                    <TextBlock Text="C U R R E N T  R E L E A S E" TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="0,0,0,0" Foreground="#FF848484" FontFamily="Verdana"/>
+                    <controls:WebLink Uri="http://www.codeplex.com/blacklight/Release/ProjectReleases.aspx" Text="Click here to download release: v4.4 (Jul11)" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#FFFFFFFF" FontFamily="Verdana"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        
+        <Border Grid.Row="1" BorderBrush="#ff333333" BorderThickness="0,3,0,3" Background="#cc000000"
+                >
+            <ItemsControl x:Name="navigationItems"
+                          VerticalAlignment="Center" HorizontalAlignment="Left">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton Margin="-1,-1,0,-1" Style="{StaticResource NavigationItemRadioButtonStyle}" Loaded="NavigationItem_Loaded" Checked="NavigationItem_Checked" GroupName="MainNavigation" >
+                            <TextBlock FontFamily="Verdana" FontSize="14" Foreground="#ffffffff" Text="{Binding Name}" />
+                        </RadioButton>
+                            
+                        </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+        </Border>
+        
+        <controls:InnerGlowBorder Grid.Row="2" InnerGlowSize="0,15,0,0" ContentZIndex="1" Background="Transparent" BorderThickness="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid HorizontalAlignment="Stretch" Margin="10,20,20,20" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" x:Name="selectedSampleGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Bottom" Height="30" Visibility="{Binding TabVisibility}">
+                        <RadioButton x:Name="sampleRadioButton" Template="{StaticResource SampleTabRadioButton}" Foreground="White" Width="120" IsChecked="True" Visibility="{Binding SampleVisibility}" Checked="SampleRadioButton_Checked">
+                            <TextBlock Text="Sample" FontFamily="Verdana" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </RadioButton>
+                        <RadioButton x:Name="codeRadioButton" Template="{StaticResource SampleTabRadioButton}" Foreground="White" Width="120" Margin="-2,0,0,0" Visibility="{Binding CodeVisibility}" Checked="CodeRadioButton_Checked">
+                            <TextBlock Text="Code / Info" FontFamily="Verdana" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </RadioButton>
+                    </StackPanel>
+
+                    <controls:InnerGlowBorder InnerGlowColor="#ff000000" InnerGlowSize="15,15,0,0" InnerGlowOpacity="0.7"
+                                      Margin="0,0,0,0" Background="#FF111111" BorderBrush="#FF333333" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Grid.Row="3">
+                        <Grid Margin="0,0,0,0">
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="127.499000549316,154.52799987793" StartPoint="117.924003601074,149" MappingMode="Absolute" SpreadMethod="Repeat">
+                                    <GradientStop Color="#00000000"/>
+                                    <GradientStop Color="#00000000" Offset="1"/>
+                                    <GradientStop Color="#00000000" Offset="0.498"/>
+                                    <GradientStop Color="#00000000" Offset="0.55500000715255737"/>
+                                    <GradientStop Color="#FF000000" Offset="0.527999997138977"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <Grid Margin="0,0,0,0">
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="119.947998046875,156.550994873047" StartPoint="125.474998474121,146.977005004883" MappingMode="Absolute" SpreadMethod="Repeat">
+                                        <GradientStop Color="#00000000"/>
+                                        <GradientStop Color="#00000000" Offset="1"/>
+                                        <GradientStop Color="#00000000" Offset="0.498"/>
+                                        <GradientStop Color="#00000000" Offset="0.55500000715255737"/>
+                                        <GradientStop Color="#FF000000" Offset="0.527999997138977"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+
+                                <ScrollViewer Background="Transparent" HorizontalScrollBarVisibility="Disabled" BorderThickness="0" VerticalScrollBarVisibility="Auto" Style="{StaticResource GlossyBlackScrollViewer}"
+                                        Margin="-2,-2,-2,-3">
+                                    <Grid>
+
+                                        <!-- SAMPLE PAGES GO HERE -->
+                                        <samples:Introduction Margin="0" x:Name="introduction" Loaded="Sample_Loaded" />
+                                        <samples:WhoIsInvolved Margin="0" x:Name="whoIsInvolved" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:SampleImageViewer Source="/Images/blacklightvs2008.jpg" Margin="20" x:Name="blacklightVs" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:SampleImageViewer Source="/Images/blacklightblend.jpg" Margin="20" x:Name="blacklightBlend" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        
+                                        <samples:DavesGlossyControlsSample Margin="20" x:Name="daveGlossyControlsSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+
+                                        <samples:DragDockPanelSample Margin="20" x:Name="dragDockPanelSample" Loaded="Sample_Loaded" Visibility="Collapsed"  />
+                                        <samples:DragDockPanelWithViewModelSample Margin="20" x:Name="dragDockPanelWithViewModelSample" Loaded="Sample_Loaded" Visibility="Collapsed"  />
+                                        <samples:OuterGlowBorderSample Margin="20" x:Name="outerGlowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:InnerGlowBorderSample Margin="20" x:Name="innerGlowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:ClippingBorderSample Margin="20" x:Name="clippingBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:DropShadowTextBlockSample Margin="20" x:Name="dropShadowTextBlockSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:DropShadowBorderSample Margin="20" x:Name="dropShadowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:StrokeTextBlockSample Margin="20" x:Name="strokeTextBlockSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:SampleImageViewer Source="/Images/wpf_dragdockpanel.jpg" Margin="20" x:Name="wpfDragDockPanelSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:AnimatedLayoutPanelSample Margin="20" x:Name="animatedLayoutPanel" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:GlassBorderSample Margin="20" x:Name="glassBorderBlockSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:PerspectiveShadowBorderSample Margin="20" x:Name="perspectiveShadowBorderBlockSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:RadialShadowBorderSample Margin="20" x:Name="radialShadowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:LoadingAnimationSample Margin="20" x:Name="loadingAnimationSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:RangeSliderSample Margin="20" x:Name="rangeSliderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:WatermarkedTextBoxSample Margin="20" x:Name="watermarkedTextBoxSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:AnimatedExpanderSample Margin="20" x:Name="animatedExpanderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        <samples:ReleaseNotes Margin="20" x:Name="releaseNotes" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                        
+                                    </Grid>
+                                </ScrollViewer>
+
+                                <samples:DeepZoomViewerSample Margin="20" x:Name="deepZoomViewerSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                <samples:SyndicationFeedListBoxSample Margin="20" x:Name="syndicationFeedListBoxSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                <samples:LiveSearchListBoxSample Margin="20" x:Name="liveSearchListBoxSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
+                                <samples:MediaPlayerSample Margin="20" x:Name="mediaPlayerSample" Loaded="Sample_Loaded" Visibility="Collapsed" MediaSource="http://silverlight.services.live.com/11264/vlog_200808/video.wmv" />
+                                <samples:MediaPlayerSample Margin="20" x:Name="animatedLayoutPanelCodePage" Loaded="Sample_Loaded" Visibility="Collapsed" MediaSource="http://silverlight.services.live.com/92125/Introduction%20to%20the%20AnimatedLayoutPanel/video.wmv" />
+
+                            </Grid>
+
+                        </Grid>
+                    </controls:InnerGlowBorder>
+                    <TextBlock HorizontalAlignment="Stretch" Margin="0,5,5,15" VerticalAlignment="Center" Width="Auto" FontFamily="Verdana" FontSize="18" Foreground="#4CFFFFFF" Text="{Binding FormattedName}" TextWrapping="Wrap"/>
+                    <TextBlock HorizontalAlignment="Stretch" Margin="0,5,5,10" VerticalAlignment="Center" Width="Auto" Grid.Row="1" FontFamily="Verdana" FontSize="12" Foreground="#FFFFFFFF" Text="{Binding Description}" TextWrapping="Wrap" LineHeight="20"
+                       Visibility="{Binding DescriptionVisibility}" />
+                    <controls:WebLink HorizontalAlignment="Right" Margin="0,5,5,5" VerticalAlignment="Center" Width="Auto" Grid.Row="2" FontFamily="Verdana" FontSize="12" Foreground="#4CFFFFFF" Text="Click here to read more about this sample."
+                              Uri="{Binding Link}"
+                              Visibility="{Binding LinkVisibility}"/>
+
+                </Grid>
+
+                <controls:OuterGlowBorder Background="#FF333333" BorderThickness="0" CornerRadius="0,0,5,5"  OuterGlowOpacity="0.5" OuterGlowSize="15" Height="Auto" HorizontalAlignment="Stretch" Margin="20,0,10,0" VerticalAlignment="Top" Width="Auto" Grid.Row="2" >
+                    <Grid VerticalAlignment="Top">
+
+                        <ScrollViewer VerticalAlignment="Top" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" x:Name="menuItemsScrollViewer"
+                                      Style="{StaticResource GlossyBlackScrollViewer}" Margin="0">
+                            <ItemsControl Margin="5" x:Name="menuItems">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Margin="5,5,5,5" VerticalAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="#FF989898" Text="{Binding Name}" TextWrapping="Wrap"/>
+                                            <ItemsControl Margin="15,5,5,5" ItemsSource="{Binding Samples}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <RadioButton Height="Auto" Margin="0,2,0,2" Style="{StaticResource MenuItemRadioButtonStyle}" Width="Auto" Loaded="MenuItem_Loaded" Checked="MenuItem_Checked" Unchecked="MenuItem_Unchecked" x:Name="SubNavigation">
+                                                            <TextBlock FontFamily="Verdana" FontSize="12" Text="{Binding Name}" UseLayoutRounding="False" TextWrapping="Wrap" />
+                                                        </RadioButton>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                        
+                        
+
+                    </Grid>
+                </controls:OuterGlowBorder>
+
+            </Grid>
+        </controls:InnerGlowBorder>
+        
+    </Grid>
+</UserControl>

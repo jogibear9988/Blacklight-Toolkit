@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Controls", "Blacklight.Controls\Blacklight.Controls.csproj", "{49349229-35C7-4589-8622-8165757AEF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase", "Blacklight.Showcase\Blacklight.Showcase.csproj", "{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase.Web", "Blacklight.Showcase.Web\Blacklight.Showcase.Web.csproj", "{48EB5861-626C-493B-A58A-42B2ACE276BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Controls.Wpf", "Blacklight.Controls.Wpf\Blacklight.Controls.Wpf.csproj", "{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase.Wpf", "Blacklight.Showcase.Wpf\Blacklight.Showcase.Wpf.csproj", "{EF61BC48-53B7-4CD1-887C-1866A4582101}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs32
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Blacklight.Controls\\Blacklight.Controls.csproj
+		SccProjectName1 = Blacklight.Controls
+		SccLocalPath1 = Blacklight.Controls
+		SccProjectUniqueName2 = Blacklight.Showcase.Web\\Blacklight.Showcase.Web.csproj
+		SccProjectName2 = Blacklight.Showcase.Web
+		SccLocalPath2 = Blacklight.Showcase.Web
+		SccProjectUniqueName3 = Blacklight.Showcase\\Blacklight.Showcase.csproj
+		SccProjectName3 = Blacklight.Showcase
+		SccLocalPath3 = Blacklight.Showcase
+		SccProjectUniqueName4 = Blacklight.Controls.Wpf\\Blacklight.Controls.Wpf.csproj
+		SccProjectName4 = Blacklight.Controls.Wpf
+		SccLocalPath4 = Blacklight.Controls.Wpf
+		SccProjectUniqueName5 = Blacklight.Showcase.Wpf\\Blacklight.Showcase.Wpf.csproj
+		SccProjectName5 = Blacklight.Showcase.Wpf
+		SccLocalPath5 = Blacklight.Showcase.Wpf
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Debug|x86.ActiveCfg = Debug|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Debug|x86.Build.0 = Debug|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Release|Any CPU.ActiveCfg = Release|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Release|x86.ActiveCfg = Release|x86
+		{EF61BC48-53B7-4CD1-887C-1866A4582101}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

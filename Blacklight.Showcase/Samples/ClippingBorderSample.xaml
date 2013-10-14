@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.ClippingBorderSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls"
+    >
+    
+    <UserControl.Resources>
+
+        <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+            <controls:ResourceDictionaryManager.ResourceDictionaries>
+                <controls:ResourceDictionaryCollection>
+
+                    <controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                        <controls:ResourceDictionary.ResourceKeys>
+                            <controls:ResourceKeyCollection>
+                                <controls:ResourceKey ResourceName="GlossyBlackCheckBoxStyle" />
+                            </controls:ResourceKeyCollection>
+                        </controls:ResourceDictionary.ResourceKeys>
+                    </controls:ResourceDictionary>
+
+                </controls:ResourceDictionaryCollection>
+            </controls:ResourceDictionaryManager.ResourceDictionaries>
+        </controls:ResourceDictionaryManager>
+
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5"
+                   Text="Clip Content" VerticalAlignment="Center" />
+        <CheckBox Content="Clip" x:Name="clipContentCheckBox" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="10,5,5,5"  
+                  IsChecked="True" Style="{StaticResource GlossyBlackCheckBoxStyle}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(Bool value)" VerticalAlignment="Center" />
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="1"
+                   Text="Border Thickness" VerticalAlignment="Center" />
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="5" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="10" x:Name="borderThicknessLeftTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="10" x:Name="borderThicknessTopTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="10" x:Name="borderThicknessRightTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="10" x:Name="borderThicknessBottomTextBox" />
+        </StackPanel>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(A thickness around the left, top, right and bottom sides)" VerticalAlignment="Center" />
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="2"
+                   Text="Corner Radius" VerticalAlignment="Center" />
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="5" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="50" x:Name="cornerRadiusTopLeftTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="50" x:Name="cornerRadiusTopRightTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="50" x:Name="cornerRadiusBottomRightTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="50" x:Name="cornerRadiusBottomLeftTextBox" />
+        </StackPanel>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(The radius for the top left, top right, bottom right and bottom left corners)" VerticalAlignment="Center" />
+
+
+        <controls:ClippingBorder Margin="20" Grid.Row="3" Grid.ColumnSpan="3" x:Name="clippingBorder" BorderBrush="White" BorderThickness="10" CornerRadius="50" MinHeight="100"
+                                 ClipContent="True">
+            <Rectangle Fill="Gray" />
+        </controls:ClippingBorder>
+        
+    </Grid>
+</UserControl>

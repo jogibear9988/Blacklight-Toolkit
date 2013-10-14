@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.DropShadowTextBlockSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    
+    <UserControl.Resources>
+
+        <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+            <controls:ResourceDictionaryManager.ResourceDictionaries>
+                <controls:ResourceDictionaryCollection>
+
+                    <controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                        <controls:ResourceDictionary.ResourceKeys>
+                            <controls:ResourceKeyCollection>
+                                <controls:ResourceKey ResourceName="GlossyBlackSlider" />
+                            </controls:ResourceKeyCollection>
+                        </controls:ResourceDictionary.ResourceKeys>
+                    </controls:ResourceDictionary>
+
+                </controls:ResourceDictionaryCollection>
+            </controls:ResourceDictionaryManager.ResourceDictionaries>
+        </controls:ResourceDictionaryManager>
+
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5"
+                   Text="Drop Shadow Opacity" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="0" Maximum="1" Value="0.5"
+                x:Name="opacitySlider" Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(Value between 0 and 1)" VerticalAlignment="Center" />
+        
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="1"
+                   Text="Drop Shadow Angle" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="0" Maximum="360" Value="45" Grid.Row="1"
+                x:Name="angleSlider"  Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="1"
+                   Text="(Value between 0 and 360)" VerticalAlignment="Center" />
+        
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="2"
+                   Text="Drop Shadow Distance" VerticalAlignment="Center" />
+        <Slider Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Minimum="0" Maximum="50" Value="4" Grid.Row="2"
+                x:Name="distanceSlider"  Style="{StaticResource GlossyBlackSlider}"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="2"
+                   Text="(Any double value, here between 0 and 50)" VerticalAlignment="Center" />
+
+        
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="3"
+                   Text="Drop Shadow Color" VerticalAlignment="Center" />
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="5" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="255" x:Name="dropShadowColorATextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="0" x:Name="dropShadowColorRTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="0" x:Name="dropShadowColorGTextBox" />
+            <TextBox Width="40" Margin="5,0,5,0" FontSize="14" FontFamily="Verdana" Text="0" x:Name="dropShadowColorBTextBox" />
+        </StackPanel>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap"
+                   Text="(A ARGB value, each from 0-255)" VerticalAlignment="Center" />
+        
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5" Grid.Row="4"
+                   Text="Text" VerticalAlignment="Center" />
+        <TextBox Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" Text="Drop Shadow Text Block" Grid.Row="4"
+                x:Name="dropShadowText" FontFamily="Verdana" FontSize="14"/>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap" Grid.Row="4"
+                   Text="(Any string value)" VerticalAlignment="Center" />
+
+        <controls:ClippingBorder CornerRadius="10" Background="#ffffffff" Grid.Row="5" Grid.ColumnSpan="3" Margin="0,15,0,0" Padding="10">
+
+            <controls:DropShadowTextBlock x:Name="dropShadowTextBlock"
+                                          Text="Drop Shadow Text Block"
+                                          DropShadowColor="#ff000000"
+                                          DropShadowOpacity="0.5"
+                                          DropShadowAngle="45"
+                                          DropShadowDistance="4"
+                                          TextWrapping="Wrap"
+                                          FontFamily="Verdana"
+                                          FontSize="36"
+                                          />
+
+        </controls:ClippingBorder>
+
+    </Grid>
+</UserControl>

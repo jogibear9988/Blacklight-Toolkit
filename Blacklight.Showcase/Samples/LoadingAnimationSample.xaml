@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.LoadingAnimationSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    
+    <Grid>
+        <controls:ClippingBorder CornerRadius="10" Background="#ffffffff" Grid.Row="4" Grid.ColumnSpan="3" Margin="0,0,0,0">
+            
+            <controls:LoadingAnimation AutoPlay="True" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                       >
+                <controls:LoadingAnimation.EllipseFill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#ff666666" Offset="0" />
+                        <GradientStop Color="#00666666" Offset="1" />
+                    </RadialGradientBrush>
+                </controls:LoadingAnimation.EllipseFill>
+                <TextBlock FontFamily="Verdana" FontSize="12" Foreground="#ff7f7f7f"
+                           Text="C O N T E N T   G O E S   H E R E" />
+            </controls:LoadingAnimation>
+            
+        </controls:ClippingBorder>
+    </Grid>
+    
+</UserControl>

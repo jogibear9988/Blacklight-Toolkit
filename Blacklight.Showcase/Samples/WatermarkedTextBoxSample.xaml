@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.WatermarkedTextBoxSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls"
+    >
+
+    <UserControl.Resources>
+
+        <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+            <controls:ResourceDictionaryManager.ResourceDictionaries>
+                <controls:ResourceDictionaryCollection>
+
+                    <controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                        <controls:ResourceDictionary.ResourceKeys>
+                            <controls:ResourceKeyCollection>
+                                <controls:ResourceKey ResourceName="GlossyBlackComboBox" />
+                            </controls:ResourceKeyCollection>
+                        </controls:ResourceDictionary.ResourceKeys>
+                    </controls:ResourceDictionary>
+
+                </controls:ResourceDictionaryCollection>
+            </controls:ResourceDictionaryManager.ResourceDictionaries>
+        </controls:ResourceDictionaryManager>
+
+        <DataTemplate x:Key="TextWatermark">
+            <TextBlock Text="Enter text here..." FontStyle="Italic" Foreground="#ffcecece" />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="ImageWatermark">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Images/placeholder.jpg" Height="17" Opacity="0.5" />
+                <TextBlock Text="Enter text here..." Margin="5,0,0,0" FontStyle="Italic" Foreground="#ffcecece" />
+            </StackPanel>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="UIElementWatermark">
+            <StackPanel Orientation="Horizontal">
+                <Canvas Width="16" Height="16">
+                <controls:LoadingAnimation AutoPlay="True" Opacity="0.5">
+                    <controls:LoadingAnimation.RenderTransform>
+                        <ScaleTransform ScaleX="0.18" ScaleY="0.18" />
+                    </controls:LoadingAnimation.RenderTransform>
+                </controls:LoadingAnimation>
+                </Canvas>
+                <TextBlock Text="Enter text here..." Margin="5,0,0,0" FontStyle="Italic" Foreground="#ffcecece" />
+            </StackPanel>
+        </DataTemplate>
+        
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="#ffffffff" FontSize="14" FontFamily="Verdana" Margin="5"
+                   Text="Example Watermarks" VerticalAlignment="Center" />
+        <ComboBox Width="195" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,5,5" x:Name="watermarkTypeComboBox" Style="{StaticResource GlossyBlackComboBox}"
+                  Foreground="White" FontFamily="Verdana" Height="25">                     
+        </ComboBox>
+        <TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5" Grid.Column="2" TextWrapping="Wrap"
+                   Text="" VerticalAlignment="Center" />
+
+        <Border CornerRadius="10" Background="#ffffffff" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,15,0,0">            
+            <controls:WatermarkedTextBox x:Name="watermarkedTextBox" Margin="20" WatermarkTemplate="{StaticResource TextWatermark}" VerticalAlignment="Top" TextWrapping="Wrap"/>                            
+        </Border>
+
+    </Grid>
+</UserControl>

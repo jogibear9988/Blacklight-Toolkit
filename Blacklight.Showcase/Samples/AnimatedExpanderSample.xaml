@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.AnimatedExpanderSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+     xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+
+    <Grid>
+        <controls:ClippingBorder CornerRadius="10" Background="#ffffffff" Grid.Row="4" Grid.ColumnSpan="3" Margin="0,0,0,0">
+
+            <StackPanel Margin="20">
+                <controls:AnimatedExpander Header="Item Header 1" Background="#cc000000" Foreground="#ccffffff">
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula velit, accumsan sit amet viverra vel, sodales eget lorem. Aenean bibendum, lorem in ornare egestas, tortor ipsum interdum nunc, vitae facilisis nisl metus in lacus. Nunc neque risus, tincidunt sed placerat a, dapibus vel mi. Vestibulum id ipsum vitae erat sollicitudin suscipit in id nibh. Maecenas non odio vel justo tincidunt rhoncus. In hac habitasse platea dictumst. Suspendisse magna nunc, pretium vitae ornare placerat, rhoncus id nunc. Morbi eleifend condimentum arcu eu bibendum. Quisque laoreet viverra rhoncus. Praesent auctor porttitor aliquet. Mauris id sapien quis enim viverra varius."
+                               TextWrapping="Wrap"
+                               Margin="10"
+                               />
+                </controls:AnimatedExpander>
+                <controls:AnimatedExpander Header="Item Header 2" Background="#cc000000" Foreground="#ccffffff">
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula velit, accumsan sit amet viverra vel, sodales eget lorem. Aenean bibendum, lorem in ornare egestas, tortor ipsum interdum nunc, vitae facilisis nisl metus in lacus. Nunc neque risus, tincidunt sed placerat a, dapibus vel mi. Vestibulum id ipsum vitae erat sollicitudin suscipit in id nibh. Maecenas non odio vel justo tincidunt rhoncus. In hac habitasse platea dictumst. Suspendisse magna nunc, pretium vitae ornare placerat, rhoncus id nunc. Morbi eleifend condimentum arcu eu bibendum. Quisque laoreet viverra rhoncus. Praesent auctor porttitor aliquet. Mauris id sapien quis enim viverra varius. Curabitur laoreet, mi ac molestie porta, nibh lorem posuere quam, sed pellentesque lacus libero ac ipsum. Nunc nisi turpis, rutrum a mollis ut, bibendum ac tortor. Maecenas a metus id metus porttitor varius imperdiet sed lectus. Fusce cursus vulputate odio a interdum. Vestibulum tellus nisl, interdum ultricies commodo id, hendrerit in odio. Mauris nec augue sed lorem condimentum adipiscing. Sed varius turpis nec massa ornare ut porta libero dapibus. Aenean magna orci, pellentesque id semper et, euismod sit amet diam. Vestibulum rhoncus justo pharetra arcu porttitor quis laoreet massa malesuada. Donec sollicitudin, nulla eu auctor pretium, leo ante eleifend turpis, in venenatis sapien velit eu tellus. Mauris lacinia rutrum ipsum eu dictum. Nullam augue turpis, aliquam at laoreet vel, commodo ut urna. Proin tempor interdum tempor. Etiam ut est justo, id eleifend elit. Integer nec nisi magna, vel volutpat sapien. Integer consectetur tempus massa, nec tempus purus vehicula id. Etiam eget rhoncus ante. Pellentesque interdum urna et felis luctus vitae blandit tortor vehicula. In fermentum risus ac massa tincidunt condimentum."
+                               TextWrapping="Wrap"
+                               Margin="10"
+                               />
+                </controls:AnimatedExpander>
+                <controls:AnimatedExpander Header="Item Header 3" Background="#cc000000" Foreground="#ccffffff">
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula velit, accumsan sit amet viverra vel, sodales eget lorem. Aenean bibendum, lorem in ornare egestas, tortor ipsum interdum nunc, vitae facilisis nisl metus in lacus. Nunc neque risus, tincidunt sed placerat a, dapibus vel mi. Vestibulum id ipsum vitae erat sollicitudin suscipit in id nibh. Maecenas non odio vel justo tincidunt rhoncus. In hac habitasse platea dictumst. Suspendisse magna nunc, pretium vitae ornare placerat, rhoncus id nunc. Morbi eleifend condimentum arcu eu bibendum. Quisque laoreet viverra rhoncus. Praesent auctor porttitor aliquet. Mauris id sapien quis enim viverra varius."
+                               TextWrapping="Wrap"
+                               Margin="10"
+                               />
+                </controls:AnimatedExpander>
+                <controls:AnimatedExpander Header="Item Header 4" Background="#cc000000" Foreground="#ccffffff">
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula velit, accumsan sit amet viverra vel, sodales eget lorem. Aenean bibendum, lorem in ornare egestas, tortor ipsum interdum nunc, vitae facilisis nisl metus in lacus. Nunc neque risus, tincidunt sed placerat a, dapibus vel mi. Vestibulum id ipsum vitae erat sollicitudin suscipit in id nibh. Maecenas non odio vel justo tincidunt rhoncus. In hac habitasse platea dictumst. Suspendisse magna nunc, pretium vitae ornare placerat, rhoncus id nunc. Morbi eleifend condimentum arcu eu bibendum. Quisque laoreet viverra rhoncus. Praesent auctor porttitor aliquet. Mauris id sapien quis enim viverra varius. Curabitur laoreet, mi ac molestie porta, nibh lorem posuere quam, sed pellentesque lacus libero ac ipsum. Nunc nisi turpis, rutrum a mollis ut, bibendum ac tortor. Maecenas a metus id metus porttitor varius imperdiet sed lectus. Fusce cursus vulputate odio a interdum. Vestibulum tellus nisl, interdum ultricies commodo id, hendrerit in odio. Mauris nec augue sed lorem condimentum adipiscing. Sed varius turpis nec massa ornare ut porta libero dapibus. Aenean magna orci, pellentesque id semper et, euismod sit amet diam. Vestibulum rhoncus justo pharetra arcu porttitor quis laoreet massa malesuada. Donec sollicitudin, nulla eu auctor pretium, leo ante eleifend turpis, in venenatis sapien velit eu tellus. Mauris lacinia rutrum ipsum eu dictum. Nullam augue turpis, aliquam at laoreet vel, commodo ut urna. Proin tempor interdum tempor. Etiam ut est justo, id eleifend elit. Integer nec nisi magna, vel volutpat sapien. Integer consectetur tempus massa, nec tempus purus vehicula id. Etiam eget rhoncus ante. Pellentesque interdum urna et felis luctus vitae blandit tortor vehicula. In fermentum risus ac massa tincidunt condimentum."
+                               TextWrapping="Wrap"
+                               Margin="10"
+                               />
+                </controls:AnimatedExpander>
+                <controls:AnimatedExpander Header="Item Header 5" Background="#cc000000" Foreground="#ccffffff">
+                    <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula velit, accumsan sit amet viverra vel, sodales eget lorem. Aenean bibendum, lorem in ornare egestas, tortor ipsum interdum nunc, vitae facilisis nisl metus in lacus. Nunc neque risus, tincidunt sed placerat a, dapibus vel mi. Vestibulum id ipsum vitae erat sollicitudin suscipit in id nibh. Maecenas non odio vel justo tincidunt rhoncus. In hac habitasse platea dictumst. Suspendisse magna nunc, pretium vitae ornare placerat, rhoncus id nunc. Morbi eleifend condimentum arcu eu bibendum. Quisque laoreet viverra rhoncus. Praesent auctor porttitor aliquet. Mauris id sapien quis enim viverra varius."
+                               TextWrapping="Wrap"
+                               Margin="10"
+                               />
+                </controls:AnimatedExpander>
+            </StackPanel>
+
+        </controls:ClippingBorder>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="LiveSearchPortBinding" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://api.search.live.net:80/soap.asmx" binding="basicHttpBinding"
+                bindingConfiguration="LiveSearchPortBinding" contract="LiveSearchService.LiveSearchPortType"
+                name="LiveSearchPort" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.AnimatedLayoutPanelSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="Auto" Height="Auto" xmlns:Blacklight_Silverlight_Controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+
+    <UserControl.Resources>
+
+        <Blacklight_Silverlight_Controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+            <Blacklight_Silverlight_Controls:ResourceDictionaryManager.ResourceDictionaries>
+                <Blacklight_Silverlight_Controls:ResourceDictionaryCollection>
+
+                    <Blacklight_Silverlight_Controls:ResourceDictionary Path="/Blacklight.Showcase;component/ResourceDictionaries/DavesGlossyControls.xaml">
+                        <Blacklight_Silverlight_Controls:ResourceDictionary.ResourceKeys>
+                            <Blacklight_Silverlight_Controls:ResourceKeyCollection>
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="BlackGlossyButton" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackCheckBoxStyle" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackRadioButton" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackComboBox" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackListBox" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackListBoxItem" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackTextBox" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackProgressBar" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackSlider" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackScrollBar" />
+                                <Blacklight_Silverlight_Controls:ResourceKey ResourceName="GlossyBlackScrollViewer" />                                
+                            </Blacklight_Silverlight_Controls:ResourceKeyCollection>
+                        </Blacklight_Silverlight_Controls:ResourceDictionary.ResourceKeys>
+                    </Blacklight_Silverlight_Controls:ResourceDictionary>
+
+                </Blacklight_Silverlight_Controls:ResourceDictionaryCollection>
+            </Blacklight_Silverlight_Controls:ResourceDictionaryManager.ResourceDictionaries>
+        </Blacklight_Silverlight_Controls:ResourceDictionaryManager>
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Height="Auto" Width="Auto">
+        
+		<Grid.RowDefinitions>
+			<RowDefinition Height="35" />			
+			<RowDefinition Height="35" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="30"/>
+		</Grid.RowDefinitions>
+        
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="173" />
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+        
+		<TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" Margin="5,0,5,0"
+			Text="Add / Remove Controls:" VerticalAlignment="Center" Grid.Row="0" />
+		<StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Margin="8,5,0,5" Grid.Row="1" Orientation="Horizontal">
+			<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+				Text="Margin:" Width="Auto" Height="Auto" Margin="3,0,10,0" VerticalAlignment="Center" />
+			<TextBox Text="10,10,10,10" TextWrapping="Wrap" x:Name="originalMargin" Height="26" Width="85" Margin="0,0,10,0" VerticalAlignment="Center" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+			<Button x:Name="addControlButton" Content="Add Control" Margin="0,0,5,0" Width="98" Style="{StaticResource BlackGlossyButton}" Foreground="White" FontFamily="Verdana" Height="20" Click="AddControlButton_Click" />
+			<Button x:Name="removeControlButton" Content="Remove First Control" Width="Auto"  Style="{StaticResource BlackGlossyButton}" Foreground="White" FontFamily="Verdana" Height="20" Margin="5,0,0,0" Click="RemoveControlButton_Click"/>
+			<TextBlock Foreground="#ffffffff" FontSize="12" FontFamily="Verdana" TextWrapping="Wrap"
+				Text="(Click to dynamically add or remove controls. Up to 20 items for demo)" Width="250" Height="Auto" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Center" />
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Left" Margin="10,1,0,1" Width="Auto" Grid.Column="1" Orientation="Horizontal">
+			<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+				Text="Control Width:" Width="Auto" Height="Auto" VerticalAlignment="Center" Margin="0,0,10,0" />
+			<TextBox Text="100" TextWrapping="Wrap" x:Name="originalWidth" Height="24" Width="75" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+			<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+				Text="Control Height:" Width="Auto" Height="Auto" VerticalAlignment="Center" Margin="10,0,10,0" />
+			<TextBox Text="100" TextWrapping="Wrap" x:Name="originalHeight" Height="24" Width="75" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+			<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+				Text="Control Type:" Width="Auto" Height="Auto" Margin="10,0,10,0" VerticalAlignment="Center" />
+			<ComboBox Width="100" x:Name="controlTypeComboBox" Style="{StaticResource GlossyBlackComboBox}"
+				Foreground="White" FontFamily="Verdana" Height="20">
+				<ComboBoxItem Content="Canvas" Height="0" Width="0" IsSelected="True" />
+				<ComboBoxItem Content="Button" Height="0" Width="0" IsSelected="False" />
+				<ComboBoxItem Content="TextBox" Height="0" Width="0" />
+				<ComboBoxItem Content="Image" Height="0" Width="0" IsSelected="True" />
+			</ComboBox>
+		</StackPanel>
+        
+		    <Grid Margin="10,20,10,10" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Width="640" HorizontalAlignment="Left" VerticalAlignment="Top" Height="300" x:Name="panelContainer">
+                <Border Width="Auto" Height="Auto" BorderBrush="Gray" BorderThickness="1">
+                    
+			        <ScrollViewer Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="panelScrollViewer" Style="{StaticResource GlossyBlackScrollViewer}" BorderThickness="1" BorderBrush="Gray" >
+
+				        <Blacklight_Silverlight_Controls:AnimatedLayoutPanel Height="Auto" Width="Auto" AnimateOnInitialise="False" x:Name="layoutPanel">
+					        <Canvas Height="100" Width="100" Background="#FFFFFFFF" Margin="10,10,10,10"/>
+					        <Button Content="Button" Width="75" Height="30" Margin="10,10,10,10"/>
+					        <TextBox Text="TextBox" TextWrapping="Wrap" Width="75" Height="25" VerticalAlignment="Top" Margin="10,10,10,10"/>
+				        </Blacklight_Silverlight_Controls:AnimatedLayoutPanel>
+			        </ScrollViewer>
+                    
+                </Border>
+		    </Grid>
+        
+		<Grid Margin="0,0,0,0" Grid.Row="2" Grid.RowSpan="1">
+			<StackPanel Height="Auto" Margin="5,5,5,0" VerticalAlignment="Top">
+				<CheckBox Style="{StaticResource GlossyBlackCheckBoxStyle}" Content="Override Item Margin" Foreground="#FFFFFFFF" Margin="0,10,0,0" x:Name="itemMarginEnabled" Checked="ItemMarginEnabled_Checked" Unchecked="ItemMarginEnabled_Unchecked"/>
+				<TextBlock Text="Item Margin:" TextWrapping="Wrap" Foreground="#FFFFFFFF" Margin="0,10,0,0" Height="Auto"/>
+				<TextBox Text="5,5,5,5" TextWrapping="Wrap" x:Name="itemMargin" Margin="0,0,5,0" LostFocus="ItemMargin_LostFocus" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+				<CheckBox Style="{StaticResource GlossyBlackCheckBoxStyle}" x:Name="itemResizeEnabled" Content="Override Item Size" Foreground="#FFFFFFFF" Height="17" Width="163" Margin="0,10,0,0" Checked="ItemResizeEnabled_Checked" Unchecked="ItemResizeEnabled_Unchecked"/>
+				<TextBlock Height="16" Foreground="#FFFFFFFF" Text="Item Resize Width:" TextWrapping="Wrap" Width="163" Margin="0,10,0,0"/>
+				<TextBox x:Name="itemWidth" Text="50" TextWrapping="Wrap" Height="Auto" Width="Auto" Margin="0,0,5,0" LostFocus="ItemWidth_LostFocus" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+				<TextBlock Height="Auto" Foreground="#FFFFFFFF" Text="Item Resize Height:" TextWrapping="Wrap" Width="Auto" Margin="0,10,0,0"/>
+				<TextBox x:Name="itemHeight" Text="50" TextWrapping="Wrap" Height="Auto" Width="Auto" Margin="0,0,5,0" LostFocus="ItemHeight_LostFocus" Style="{StaticResource GlossyBlackTextBox}" Foreground="#FFFFFFFF"/>
+				<CheckBox Style="{StaticResource GlossyBlackCheckBoxStyle}" x:Name="entranceAnimationsEnabled" Content="Animate Item Entrance" Foreground="#FFFFFFFF" Height="Auto" Width="Auto" Margin="0,10,0,0" IsChecked="True" Checked="EntranceAnimationsEnabled_Checked" Unchecked="EntranceAnimationsEnabled_Unchecked"/>
+				<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+					Text="Entrance Start Position:" Width="Auto" Height="Auto" Margin="0,10,0,0" />
+				<ComboBox Width="Auto" x:Name="entranceStartPosition" Style="{StaticResource GlossyBlackComboBox}"
+					Foreground="White" FontFamily="Verdana" Height="20" FontSize="12" Margin="0,2,5,0" SelectionChanged="EntranceStartPosition_SelectionChanged">
+					<ComboBoxItem Content="TopLeft" IsSelected="True" />
+					<ComboBoxItem Content="TopCentre" />
+					<ComboBoxItem Content="TopRight" Height="0" Width="0" />
+					<ComboBoxItem Content="MiddleLeft" Height="0" Width="0" />
+					<ComboBoxItem Content="MiddleCentre" Height="0" Width="0" />
+					<ComboBoxItem Content="MiddleRight" Height="0" Width="0" />
+					<ComboBoxItem Content="BottomLeft" Height="0" Width="0" />
+					<ComboBoxItem Content="BottomCentre" Height="0" Width="0" />
+					<ComboBoxItem Content="BottomRight" Height="0" Width="0" />
+				</ComboBox>
+				<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+					Text="Wrap Direction:" Width="Auto" Margin="0,10,0,0" />
+				<ComboBox Width="Auto" x:Name="wrapDirectionComboBox" Style="{StaticResource GlossyBlackComboBox}"
+					Foreground="White" FontFamily="Verdana" Height="20" Margin="0,2,5,0" FontSize="12" SelectionChanged="WrapDirectionComboBox_SelectionChanged">
+					<ComboBoxItem Content="Horizontal" IsSelected="True" />
+					<ComboBoxItem Content="Vertical" />
+				</ComboBox>
+			</StackPanel>
+		</Grid>
+		<Grid Margin="10,0,0,0" Grid.RowSpan="2" Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1" Height="30" VerticalAlignment="Top">
+			<StackPanel HorizontalAlignment="Left" Width="Auto" Orientation="Horizontal">
+				<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+					Text="Panel Width:" Width="Auto" Height="Auto" VerticalAlignment="Center" />
+				<Slider Style="{StaticResource GlossyBlackSlider}" Margin="5,0,0,0" Width="100" Maximum="800" Minimum="130" Value="640" x:Name="panelWidthSlider" ValueChanged="PanelWidthSlider_ValueChanged"/>
+				<TextBlock Foreground="#ffffffff" FontSize="11" FontFamily="Verdana"
+					Text="Panel Height:" Width="Auto" Height="Auto" VerticalAlignment="Center" Margin="10,0,0,0" />
+				<Slider Style="{StaticResource GlossyBlackSlider}" Width="100" Maximum="600" Minimum="110" Value="300" Height="Auto" Margin="5,0,0,0" x:Name="panelHeightSlider" ValueChanged="PanelHeightSlider_ValueChanged"/>
+				<CheckBox Style="{StaticResource GlossyBlackCheckBoxStyle}" Content="Horizontal Scrollbars" VerticalAlignment="Center" Margin="10,0,0,0" Background="#FF448DCA" Foreground="#FFFFFFFF" x:Name="horizontalScrollbars" Checked="HorizontalScrollbars_Checked" Unchecked="HorizontalScrollbars_Unchecked"/>
+				<CheckBox Style="{StaticResource GlossyBlackCheckBoxStyle}" Content="Vertical Scrollbars" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#FFFFFFFF" x:Name="verticalScrollbars" IsChecked="True" Checked="VerticalScrollbars_Checked" Unchecked="VerticalScrollbars_Unchecked"/>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</UserControl>
