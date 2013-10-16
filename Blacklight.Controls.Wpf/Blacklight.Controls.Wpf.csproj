@@ -8,8 +8,8 @@
     <ProjectGuid>{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blacklight.Controls.Wpf</RootNamespace>
-    <AssemblyName>Blacklight.Controls.Wpf</AssemblyName>
+    <RootNamespace>Blacklight.Controls</RootNamespace>
+    <AssemblyName>Blacklight.Controls</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

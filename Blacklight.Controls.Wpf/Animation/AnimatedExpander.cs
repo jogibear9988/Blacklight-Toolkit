@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>An animated expanding / collapsing control.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

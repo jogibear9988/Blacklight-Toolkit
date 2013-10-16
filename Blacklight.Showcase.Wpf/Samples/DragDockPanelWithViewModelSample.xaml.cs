@@ -148,16 +148,16 @@ using System.Collections.ObjectModel;
             switch (this.minimizedPositionComboBox.SelectedIndex)
             {
                 case 0:
-                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Right;
+                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.MinimizedPositions.Right;
                     break;
                 case 1:
-                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Bottom;
+                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.MinimizedPositions.Bottom;
                     break;
                 case 2:
-                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Left;
+                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.MinimizedPositions.Left;
                     break;
                 case 3:
-                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Top;
+                    this.dragDockPanelHostWithItemTemplate.MinimizedPosition = Blacklight.Controls.MinimizedPositions.Top;
                     break;
             }
         }

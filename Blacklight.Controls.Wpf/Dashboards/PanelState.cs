@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Enum for panel states.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
 

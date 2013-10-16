@@ -8,7 +8,7 @@
 // <author>Mike Parker</author>
 // <summary>A class that contains an instance of a translate transform and its index within a transform group</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {   
     using System;
     using System.Net;

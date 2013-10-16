@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Class representing a resource dictionary collection.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

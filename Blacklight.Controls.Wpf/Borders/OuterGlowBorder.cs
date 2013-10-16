@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>A border that also shows an outer glow.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

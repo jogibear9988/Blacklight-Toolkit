@@ -8,7 +8,7 @@
 // <date>02-Dec-2008</date>
 // <summary>Headered content control base class.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Windows;

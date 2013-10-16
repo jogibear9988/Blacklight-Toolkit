@@ -254,13 +254,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Blacklight.Controls.Wpf\Blacklight.Controls.Wpf.csproj">
-      <Project>{D9E56CD3-9A3B-49DA-8A53-86B42F331A1A}</Project>
-      <Name>Blacklight.Controls.Wpf</Name>
-    </ProjectReference>
+    <Resource Include="Images\placeholder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\placeholder.jpg" />
+    <ProjectReference Include="..\Blacklight.Controls.Wpf\Blacklight.Controls.Wpf.csproj">
+      <Project>{d9e56cd3-9a3b-49da-8a53-86b42f331a1a}</Project>
+      <Name>Blacklight.Controls.Wpf</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

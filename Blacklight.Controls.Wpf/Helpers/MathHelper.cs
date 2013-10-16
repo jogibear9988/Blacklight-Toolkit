@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Class with trig and other helper functions.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

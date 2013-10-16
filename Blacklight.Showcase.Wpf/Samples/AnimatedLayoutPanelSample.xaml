@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="Blacklight.Showcase.Wpf.Samples.AnimatedLayoutPanelSample"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-    Width="Auto" Height="Auto" xmlns:Blacklight_Silverlight_Controls="clr-namespace:Blacklight.Controls.Wpf;assembly=Blacklight.Controls.Wpf">
+    Width="Auto" Height="Auto" xmlns:Blacklight_Silverlight_Controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
 
     <UserControl.Resources>
 

@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Class for managing multiple resource dictionaries at the application level.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

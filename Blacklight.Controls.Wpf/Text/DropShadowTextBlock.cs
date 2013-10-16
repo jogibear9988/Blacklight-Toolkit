@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>A control that displays text, with a drop shadow.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

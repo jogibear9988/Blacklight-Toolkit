@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>A control that shows a loading animation.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

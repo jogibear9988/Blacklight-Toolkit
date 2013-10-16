@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Class to represent dragging event arguments.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

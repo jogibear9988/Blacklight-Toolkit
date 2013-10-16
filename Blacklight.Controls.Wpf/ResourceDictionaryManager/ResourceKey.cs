@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Class for getting a key out of a resource dictionary.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Animated content control base class.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

@@ -8,7 +8,7 @@
 // <author>Mike Parker</author>
 // <summary>Represents a control that can be used to display or edit unformatted text whilst providing subtle help text where no text has been entered.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     #region Using...
 

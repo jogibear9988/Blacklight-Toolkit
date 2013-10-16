@@ -9,8 +9,6 @@
 // <summary>The drag dock panel sample.</summary>
 //-----------------------------------------------------------------------
 
-using Blacklight.Controls.Wpf;
-
 namespace Blacklight.Showcase.Wpf.Samples
 {
     using System;
@@ -99,7 +97,7 @@ namespace Blacklight.Showcase.Wpf.Samples
         private void AddPanel()
         {
             // Classic Panel adding
-            this.panels.Add(new Blacklight.Controls.Wpf.DragDockPanel()
+            this.panels.Add(new DragDockPanel()
             {
                 Margin = new Thickness(15),
                 Header = string.Format("{0} {1}", "Panel", this.dragDockPanelHost.Items.Count + 1),
@@ -138,19 +136,19 @@ namespace Blacklight.Showcase.Wpf.Samples
             switch (this.minimizedPositionComboBox.SelectedIndex)
             {
                 case 0:
-                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Right;
+                    this.dragDockPanelHost.MinimizedPosition = MinimizedPositions.Right;
                     break;
                 case 1:
-                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Bottom;
+                    this.dragDockPanelHost.MinimizedPosition = MinimizedPositions.Bottom;
                     break;
                 case 2:
-                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Left;
+                    this.dragDockPanelHost.MinimizedPosition = MinimizedPositions.Left;
                     break;
                 case 3:
-                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.Top;
+                    this.dragDockPanelHost.MinimizedPosition = MinimizedPositions.Top;
                     break;
                 case 4:
-                    this.dragDockPanelHost.MinimizedPosition = Blacklight.Controls.Wpf.MinimizedPositions.None;
+                    this.dragDockPanelHost.MinimizedPosition = MinimizedPositions.None;
                     break;
             }
         }

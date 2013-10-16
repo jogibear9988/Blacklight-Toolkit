@@ -8,7 +8,7 @@
 // <author>Mike Parker</author>
 // <summary>A panel that wraps content and animates items as part of the arrange.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
     using System.Net;

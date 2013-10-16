@@ -8,7 +8,7 @@
 // <author>Martin Grayson</author>
 // <summary>Enumeration for representing state of an animation.</summary>
 //-----------------------------------------------------------------------
-namespace Blacklight.Controls.Wpf
+namespace Blacklight.Controls
 {
     using System;
 

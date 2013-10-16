@@ -385,34 +385,34 @@ namespace Blacklight.Showcase.Wpf.Samples
                 switch (this.entranceStartPosition.SelectedItem.ToString())
                 {
                     case "TopLeft":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.TopLeft;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.TopLeft;
                         break;
                     case "TopCentre":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.TopCentre;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.TopCentre;
                         break;
                     case "TopRight":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.TopRight;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.TopRight;
                         break;
                     case "MiddleLeft":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.MiddleLeft;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.MiddleLeft;
                         break;
                     case "MiddleCentre":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.MiddleCentre;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.MiddleCentre;
                         break;
                     case "MiddleRight":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.MiddleRight;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.MiddleRight;
                         break;
                     case "BottomLeft":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.BottomLeft;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.BottomLeft;
                         break;
                     case "BottomCentre":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.BottomCentre;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.BottomCentre;
                         break;
                     case "BottomRight":
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.BottomRight;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.BottomRight;
                         break;
                     default:
-                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.Wpf.EntranceStartPosition.BottomRight;
+                        this.layoutPanel.EntranceStartPosition = Blacklight.Controls.EntranceStartPosition.BottomRight;
                         break;
                 }
             }
@@ -434,13 +434,13 @@ namespace Blacklight.Showcase.Wpf.Samples
                 switch (this.wrapDirectionComboBox.SelectedItem.ToString())
                 {
                     case "Horizontal":
-                        this.layoutPanel.WrapDirection = Blacklight.Controls.Wpf.WrapDirection.Horizontal;
+                        this.layoutPanel.WrapDirection = Blacklight.Controls.WrapDirection.Horizontal;
                         break;
                     case "Vertical":
-                        this.layoutPanel.WrapDirection = Blacklight.Controls.Wpf.WrapDirection.Vertical;
+                        this.layoutPanel.WrapDirection = Blacklight.Controls.WrapDirection.Vertical;
                         break;
                     default:
-                        this.layoutPanel.WrapDirection = Blacklight.Controls.Wpf.WrapDirection.Horizontal;
+                        this.layoutPanel.WrapDirection = Blacklight.Controls.WrapDirection.Horizontal;
                         break;
                 }
             }
